@@ -1,0 +1,15 @@
+{
+  "workbench.iconTheme": "material-icon-theme",
+  "material-icon-theme.files.associations": {
+    "*.controller.ts": "Nest-controller",
+    "*.decorator.ts": "Nest-decorator",
+    "*.filter.ts": "Nest-filter",
+    "*.gateway.ts": "Nest-gateway",
+    "*.guard.ts": "Nest-guard",
+    "*.middleware.ts": "Nest-middleware",
+    "*.module.ts": "Nest-module",
+    "*.pipe.ts": "Nest-pipe",
+    "*.resolver.ts": "Nest-resolver",
+    "*.service.ts": "Nest-service"
+  }
+}
