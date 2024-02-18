@@ -1,7 +1,10 @@
 node_modules
+.vscode
+prisma
 .editorconfig
 .eslintrc.js
 .gitignore
+Dockerfile
 .dockerignore
-README.md
 LICENSE
+README.md
