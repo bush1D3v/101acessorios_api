@@ -14,7 +14,6 @@ datasource db {
 model User {
   id        Int      @id @default(autoincrement())
   createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
   name      String   @db.VarChar(75)
   email     String   @db.VarChar(75)
   password  String   @db.VarChar(16)
