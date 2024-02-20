@@ -1,18 +1,20 @@
-FROM oven/bun:1 as builder
+FROM node:20-alpine AS base
 
 WORKDIR /app
 
-COPY package.json bun.lockb  ./
+COPY package.json prisma ./
 COPY . .
 
-RUN bun install
+RUN yarn install
+
+FROM base AS builder
+
+COPY --from=base /app /app
+
+RUN yarn run build
 
 FROM builder AS final
 
-COPY --from=builder /app /app
-
-RUN bun run build
-
 EXPOSE 3001
 
-CMD ["bun", "start"]
+CMD ["yarn", "start"]
