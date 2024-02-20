@@ -26,7 +26,6 @@ A **API 101 Acessórios** é uma aplicação **RESTful** que oferece suporte a o
     <img align='center' height='60' width='70' title='Swagger' alt='swagger' src='https://github.com/bush1D3v/tsbank_api/assets/133554156/6739401f-d03b-47f8-b01f-88da2a9075d1' />&nbsp;
     <img align='center' height='48' width='48' title='Bcrypt' alt='bcrypt' src='https://github.com/bush1D3v/solid_rest_api/assets/133554156/5863bac1-a591-4776-82a4-f427681934be' /> &nbsp;&nbsp;&nbsp;
     <img align='center' height='50' width='50' title='Cors' alt='cors' src='https://github.com/bush1D3v/101acessorios_api/assets/133554156/3b4cccec-065e-428a-a663-1c5939404c1a' /> &nbsp;&nbsp;&nbsp;
-    <img align='center' height='49' width='49' title='Dotenv' alt='dotenv' src='https://github.com/bush1D3v/my_portfolio/assets/133554156/432ec521-c94a-4f24-964e-f62658d04581' />
 </div>
 
 ## 🏗 Estrutura e Arquitetura
