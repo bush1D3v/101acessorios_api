@@ -1,0 +1,190 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "101 Acessórios API Documentation",
+    "description": "Welcome to the 101 Acessórios API Documentation! Here, you will find comprehensive information about the API's endpoints and how to utilize them. Explore the available routes and test their functionality. Don't forget to register and complete the authorization process to unlock the full potential of the API.",
+    "contact": {
+      "email": "victor.jose.lopes.navarro@gmail.com"
+    },
+    "version": "1.0.0"
+  },
+  "servers": [
+    {
+      "url": "https://101acessorios-api.onrender.com",
+      "description": "Web Server"
+    },
+    {
+      "url": "http://localhost:3001",
+      "description": "Local Server"
+    }
+  ],
+  "paths": {
+    "/user": {
+      "post": {
+        "summary": "Create a new user",
+        "description": "Route responsible for creating a new user",
+        "tags": ["User"],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/User"
+              },
+              "examples": {
+                "User": {
+                  "value": {
+                    "name": "Victor dos Testes",
+                    "email": "victorteste@gmail.com",
+                    "password": "vtjln123"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "409": {
+            "description": "Conflict",
+            "content": {
+              "application/json": {
+                "schemas": {
+                  "$ref": "#/components/schemas/HandleException"
+                },
+                "examples": {
+                  "HandleException": {
+                    "value": {
+                      "message": "Este email já está sendo utilizado em outra conta."
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schemas": {
+                  "$ref": "#/components/schemas/ZodException"
+                },
+                "examples": {
+                  "ZodException": {
+                    "value": {
+                      "statusCode": 400,
+                      "message": "Validation failed",
+                      "errors": [
+                        {
+                          "code": "invalid_type",
+                          "expected": "string",
+                          "received": "null",
+                          "path": ["Array"],
+                          "message": "O campo 'senha' é requirido."
+                        }
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "201": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schemas": {
+                  "$ref": "#/components/schemas/Confirmation"
+                },
+                "examples": {
+                  "Confirmation": {
+                    "value": {
+                      "message": "Usuário criado com sucesso!"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+
+  "components": {
+    "securitySchemes": {
+      "bearerAuth": {
+        "type": "http",
+        "scheme": "bearer",
+        "bearerFormat": "JWT"
+      }
+    },
+    "schemas": {
+      "User": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "email": {
+            "type": "string"
+          },
+          "password": {
+            "type": "string"
+          }
+        },
+        "required": ["name", "email", "password"]
+      },
+      "Confirmation": {
+        "type": "object",
+        "properties": {
+          "message": {
+            "type": "string"
+          }
+        }
+      },
+      "HandleException": {
+        "type": "object",
+        "properties": {
+          "message": {
+            "type": "string"
+          }
+        }
+      },
+      "ZodException": {
+        "type": "object",
+        "properties": {
+          "statusCode": {
+            "type": "number"
+          },
+          "message": {
+            "type": "string"
+          },
+          "errors": {
+            "type": "array",
+            "properties": {
+              "code": {
+                "type": "string"
+              },
+              "expected": {
+                "type": "string"
+              },
+              "received": {
+                "type": "string"
+              },
+              "message": {
+                "type": "string"
+              },
+              "path": {
+                "type": "array",
+                "properties": {
+                  "Array": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
