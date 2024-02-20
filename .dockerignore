@@ -1,6 +1,6 @@
-node_modules
 .vscode
-prisma
+dist
+node_modules
 .editorconfig
 .eslintrc.js
 .gitignore
