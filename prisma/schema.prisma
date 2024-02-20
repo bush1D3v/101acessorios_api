@@ -14,8 +14,8 @@ model User {
   id        Int      @id @default(autoincrement())
   createdAt DateTime @default(now())
   name      String   @db.VarChar(75)
-  email     String   @db.VarChar(75)
-  password  String   @db.VarChar(16)
+  email     String   @unique @db.VarChar(75)
+  password  String
 }
 
 model Product {
