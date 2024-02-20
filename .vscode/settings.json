@@ -2,14 +2,37 @@
   "workbench.iconTheme": "material-icon-theme",
   "material-icon-theme.files.associations": {
     "*.controller.ts": "Nest-controller",
-    "*.decorator.ts": "Nest-decorator",
-    "*.filter.ts": "Nest-filter",
-    "*.gateway.ts": "Nest-gateway",
-    "*.guard.ts": "Nest-guard",
-    "*.middleware.ts": "Nest-middleware",
+    "*.models.ts": "Nest",
+    "*.functions.ts": "Nest-middleware",
     "*.module.ts": "Nest-module",
-    "*.pipe.ts": "Nest-pipe",
-    "*.resolver.ts": "Nest-resolver",
-    "*.service.ts": "Nest-service"
-  }
+    "*.providers.ts": "Nest-resolver",
+    "*.service.ts": "Nest-service",
+    "*.repositories.ts": "Nest-gateway",
+    "*.body.ts": "Nest-pipe",
+    "*.schema.ts": "Nest-filter",
+    "*.test.ts": "Nest-decorator",
+    "*.manager.ts": "Nest-guard",
+    "redis.config.ts": "Scala",
+    "index.ts": "Yang",
+    "tests.config.ts": "Test-ts",
+    ".env.test.example": "Tune",
+    "main.ts": "Typescript-def",
+    "key.ts": "Lock",
+    "handleError.ts": "Rescript",
+    "HttpStatusError.ts": "Rescript-interface"
+  },
+  "material-icon-theme.folders.associations": {
+    "repositories": "Mappings",
+    "user": "Target",
+    "transaction": "Include",
+    "card": "Import",
+    "providers": "Server",
+    "classes": "Typescript"
+  },
+  "cSpell.words": [
+    "adasdasdsadasdasdasdasdasdasdasdas",
+    "asftehdkjdasdasdnahsndashdnashundsahundahusndahsundhasunda",
+    "openapi",
+    "vtjln"
+  ]
 }
