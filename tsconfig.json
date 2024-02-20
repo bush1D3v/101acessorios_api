@@ -1,13 +1,12 @@
 {
   "compilerOptions": {
-    "module": "ES2020",
+    "module": "NodeNext",
     "declaration": true,
     "removeComments": true,
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
     "allowSyntheticDefaultImports": true,
-    "lib": ["ES2020", "DOM", "DOM.Iterable"],
-    "target": "ES2020",
+    "target": "ESNext",
     "sourceMap": true,
     "outDir": "./dist",
     "baseUrl": "./",
@@ -17,14 +16,16 @@
     "noImplicitAny": true,
     "strictBindCallApply": true,
     "forceConsistentCasingInFileNames": true,
-    "strict": true,
-    "moduleResolution": "node",
+    "moduleResolution": "NodeNext",
     "strictFunctionTypes": true,
     "noUnusedLocals": true,
+    "strict": true,
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true,
+    "resolveJsonModule": true,
     "paths": {
-      "@/*": ["./src/*"]
+      "@/*": ["./src/*"],
+      "!/*": ["./tests/*"]
     }
   },
   "include": ["src"]
