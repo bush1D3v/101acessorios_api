@@ -36,6 +36,13 @@ O projeto segue os princípios da **arquitetura limpa** e leva em consideração
 
 Para usar a API, é **necessário** autenticar-se. Você deve obter um **token JWT válido** através do **endpoint de login** antes de acessar outros recursos. O token JWT deve ser incluído no **cabeçalho de autorização** de **todas** as solicitações subsequentes.
 
+## 📃 Documentação da Aplicação
+
+A seguir, temos o link da **documentação oficial** da nossa aplicação no **Swagger**: <br>
+https://one01acessorios-api.onrender.com/
+
+> obs: Pode ocorrer atraso no carregamento, pois se o UptimeRobot falhar, e, posteriormente, o deploy não for acessado por um certo período, uma requisição subsequente solicitará ao Render que a aplicação saia do "Modo Sleep".
+
 ## 🐳 Docker
 
 Com a adição do Docker, você agora pode utilizar dos scripts fornecidos em `package.json` para poder construir a imagem docker e rodar os containers da aplicação e dos testes.
